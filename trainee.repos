@@ -11,6 +11,10 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_description.git
     version: ros2
+  raspicat_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_sim.git
+    version: ros2
   raspicat_map2gazebo:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_map2gazebo.git
