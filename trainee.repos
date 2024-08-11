@@ -11,7 +11,7 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_description.git
     version: ros2
-  raspicat_description:
+  raspicat_sim:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_sim.git
     version: ros2
