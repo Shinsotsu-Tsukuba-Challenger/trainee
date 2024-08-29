@@ -12,7 +12,7 @@ sudo apt install python3-vcstool
 * Install
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/Shinsotsu-Tsukuba-Challenger/trainee/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Shinsotsu-Tsukuba-Challenger/trainee/main/setup.sh)
 ```
 
 * Update
