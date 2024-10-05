@@ -3,6 +3,10 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
     version: main
+  trainee_setup_scripts:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_setup_scripts.git
+    version: main
   raspicat_ros:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_ros.git
