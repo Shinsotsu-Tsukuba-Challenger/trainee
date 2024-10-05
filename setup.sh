@@ -1,5 +1,8 @@
 #!/bin/bash -evx
 
+sudo apt update -y
+sudo apt install -y python3-vcstool
+
 git clone git@github.com:Shinsotsu-Tsukuba-Challenger/trainee.git $HOME/trainee
 grep -q "source $HOME/trainee/install/setup.bash" $HOME/.bashrc || echo "source $HOME/trainee/install/setup.bash" >> $HOME/.bashrc
 grep -q "export TRAINEE_WS=$HOME/trainee" $HOME/.bashrc || echo "export TRAINEE_WS=$HOME/trainee" >> $HOME/.bashrc
