@@ -1,18 +1,17 @@
 # trainee
 
-## Install vcstool
-
-```
-sudo apt update
-sudo apt install python3-vcstool
-```
-
 ## How to set up workspace
 
 * Install
 
+#### PC
 ```
-bash <(curl -s https://raw.githubusercontent.com/Shinsotsu-Tsukuba-Challenger/trainee/main/setup.sh)
+source <(curl -s https://raw.githubusercontent.com/Shinsotsu-Tsukuba-Challenger/trainee/main/setup.sh) pc
+```
+
+#### Raspberry Pi
+```
+source <(curl -s https://raw.githubusercontent.com/Shinsotsu-Tsukuba-Challenger/trainee/main/setup.sh) raspi
 ```
 
 * Update
