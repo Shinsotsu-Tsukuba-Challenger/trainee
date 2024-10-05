@@ -1,9 +1,20 @@
+#!/bin/bash -evx
+
 git clone git@github.com:Shinsotsu-Tsukuba-Challenger/trainee.git $HOME/trainee
 grep -q "source $HOME/trainee/install/setup.bash" $HOME/.bashrc || echo "source $HOME/trainee/install/setup.bash" >> $HOME/.bashrc
 grep -q "export TRAINEE_WS=$HOME/trainee" $HOME/.bashrc || echo "export TRAINEE_WS=$HOME/trainee" >> $HOME/.bashrc
 source $HOME/.bashrc
 cd $TRAINEE_WS && mkdir src
-vcs import src < trainee.repos --debug
+if [ "$1" == "pc" ]; then
+    echo "Setting up for PC"
+    vcs import src < trainee_pc.repos --debug
+elif [ "$1" == "raspi" ]; then
+    echo "Setting up for Raspberry Pi"
+    vcs import src < trainee_raspi.repos --debug
+else
+    echo "No or incorrect argument provided. Default setup will be used."
+    vcs import src < trainee.repos --debug
+fi
 sudo apt update -y
 rosdep update
 rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
