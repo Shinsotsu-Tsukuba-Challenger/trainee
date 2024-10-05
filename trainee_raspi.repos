@@ -1,0 +1,13 @@
+repositories:
+  trainee_launch:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
+    version: main
+  raspicat_ros:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_ros.git
+    version: ros2
+  ros_odrive:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/ros_odrive.git
+    version: main
