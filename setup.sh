@@ -4,6 +4,7 @@ grep -q "export TRAINEE_WS=$HOME/trainee" $HOME/.bashrc || echo "export TRAINEE_
 source $HOME/.bashrc
 cd $TRAINEE_WS && mkdir src
 vcs import src < trainee.repos --debug
+sudo apt update -y
 rosdep update
 rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 source /opt/ros/$ROS_DISTRO/setup.bash
