@@ -31,3 +31,11 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/ros_odrive.git
     version: main
+  livox_sdk2_vendor:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_sdk2_vendor.git
+    version: main
+  livox_ros_driver2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_ros_driver2.git
+    version: feat/ros-merge
