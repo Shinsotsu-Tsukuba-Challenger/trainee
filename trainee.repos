@@ -1,4 +1,8 @@
 repositories:
+  trainee_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_description.git
+    version: main
   trainee_launch:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
@@ -14,7 +18,7 @@ repositories:
   ros_odrive:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/ros_odrive.git
-    version: main
+    version: feat/can-reconnect
   livox_sdk2_vendor:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_sdk2_vendor.git

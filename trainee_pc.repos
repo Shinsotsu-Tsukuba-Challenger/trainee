@@ -1,4 +1,8 @@
 repositories:
+  trainee_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_description.git
+    version: main
   trainee_launch:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
