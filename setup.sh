@@ -13,7 +13,7 @@ if [ "$1" == "pc" ]; then
     echo "Setting up for PC"
     vcs import src < trainee_pc.repos --debug
     sudo apt update -y
-    sudo apt install -y ros-humble-gazebo-*
+    sudo apt install -y ros-$ROS_DISTRO-gazebo-*
     rosdep update
     rosdep install -y --from-paths src --skip-keys odrive_ros2_control --ignore-src --rosdistro $ROS_DISTRO
 elif [ "$1" == "raspi" ]; then
@@ -24,7 +24,7 @@ elif [ "$1" == "raspi" ]; then
     rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 else
     echo "No or incorrect argument provided. Default setup will be used."
-    vcs import src < trainee.repos --debug
+    vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
 fi
 
 source /opt/ros/$ROS_DISTRO/setup.bash

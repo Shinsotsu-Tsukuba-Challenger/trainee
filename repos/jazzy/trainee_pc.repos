@@ -1,0 +1,49 @@
+repositories:
+  trainee_documentation:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_documentation.git
+    version: main
+  trainee_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_description.git
+    version: main
+  trainee_launch:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
+    version: main
+  trainee_setup_scripts:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_setup_scripts.git
+    version: main
+  teleop_twist_joy_comfy:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/teleop_twist_joy_comfy.git
+    version: main
+  livox_sdk2_vendor:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_sdk2_vendor.git
+    version: main
+  livox_ros_driver2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_ros_driver2.git
+    version: feat/ros-merge
+  raspicat_ros:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_ros.git
+    version: ros2
+  raspicat_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_description.git
+    version: ros2
+  raspicat_sim:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_sim.git
+    version: ros2
+  raspicat_map2gazebo:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/raspicat_map2gazebo.git
+    version: main
+  raspimouse2:
+    type: git
+    url: git@github.com:CIT-Autonomous-Robot-Lab/raspimouse2.git
+    version: master
