@@ -1,0 +1,33 @@
+repositories:
+  trainee_documentation:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_documentation.git
+    version: main
+  trainee_description:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_description.git
+    version: main
+  trainee_launch:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_launch.git
+    version: main
+  trainee_setup_scripts:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/trainee_setup_scripts.git
+    version: main
+  teleop_twist_joy_comfy:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/teleop_twist_joy_comfy.git
+    version: main
+  ros_odrive:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/ros_odrive.git
+    version: feat/can-reconnect
+  livox_sdk2_vendor:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_sdk2_vendor.git
+    version: jazzy
+  livox_ros_driver2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_ros_driver2.git
+    version: feat/ros-merge
