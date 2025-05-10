@@ -11,14 +11,14 @@ cd $TRAINEE_WS && mkdir src
 
 if [ "$1" == "pc" ]; then
     echo "Setting up for PC"
-    vcs import src < trainee_pc.repos --debug
+    vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
     sudo apt update -y
     sudo apt install -y ros-$ROS_DISTRO-gazebo-*
     rosdep update
     rosdep install -y --from-paths src --skip-keys odrive_ros2_control --ignore-src --rosdistro $ROS_DISTRO
 elif [ "$1" == "raspi" ]; then
     echo "Setting up for Raspberry Pi"
-    vcs import src < trainee_raspi.repos --debug
+    vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
     sudo apt update -y
     rosdep update
     rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
