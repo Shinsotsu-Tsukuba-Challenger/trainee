@@ -31,7 +31,15 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_ros_driver2.git
     version: feat/ros-merge
+  lidar_localization_ros2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/lidar_localization_ros2.git
+    version: main
   navigation2:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/navigation2.git
     version: jazzy
+  ndt_omp_ros2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/ndt_omp_ros2.git
+    version: humble
