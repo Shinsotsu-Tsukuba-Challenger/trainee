@@ -15,9 +15,9 @@ cd $TRAINEE_WS && mkdir -p src
 
 # リポジトリのインポート
 if [ "$TARGET" == "pc" ]; then
-    vcs import src < repos/$ROS_DISTRO/trainee_pc.repos --debug
+    vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
 elif [ "$TARGET" == "raspi" ]; then
-    vcs import src < repos/$ROS_DISTRO/trainee_raspi.repos --debug
+    vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
 else
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
 fi
