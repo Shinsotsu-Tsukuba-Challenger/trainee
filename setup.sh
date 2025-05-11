@@ -14,11 +14,21 @@ source $HOME/.bashrc
 cd $TRAINEE_WS && mkdir -p src
 
 # リポジトリのインポート
-if [ "$TARGET" == "pc" ]; then
+if [ "$1" == "pc" ]; then
+    echo "Setting up for PC"
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
-elif [ "$TARGET" == "raspi" ]; then
+    sudo apt update -y
+    sudo apt install -y ros-$ROS_DISTRO-gazebo-*
+    rosdep update
+    rosdep install -y --from-paths src --skip-keys odrive_ros2_control --ignore-src --rosdistro $ROS_DISTRO
+elif [ "$1" == "raspi" ]; then
+    echo "Setting up for Raspberry Pi"
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
+    sudo apt update -y
+    rosdep update
+    rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 else
+    echo "No or incorrect argument provided. Default setup will be used."
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
 fi
 
