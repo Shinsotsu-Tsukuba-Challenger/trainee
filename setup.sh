@@ -1,7 +1,7 @@
 #!/bin/bash -evx
 
 sudo apt update -y
-sudo apt install -y python3-vcstool
+sudo apt install -y python3-vcstool rsync
 
 # 引数の確認
 TARGET=$1
