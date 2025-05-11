@@ -31,3 +31,7 @@ repositories:
     type: git
     url: git@github.com:Shinsotsu-Tsukuba-Challenger/livox_ros_driver2.git
     version: feat/ros-merge
+  navigation2:
+    type: git
+    url: git@github.com:Shinsotsu-Tsukuba-Challenger/navigation2.git
+    version: jazzy
