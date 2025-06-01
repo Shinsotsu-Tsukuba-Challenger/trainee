@@ -34,19 +34,17 @@ rosdep install -y --from-paths src --skip-keys odrive_ros2_control --ignore-src 
 if [ "$CACHE" == "true" ] && [ -d "$CACHE_PATH" ]; then
     echo "Cache mode: comparing packages in $CACHE_PATH"
     for pkg in $(ls src); do
-        if [ -d "$CACHE_PATH/$pkg" ] && [ -d "src/$pkg/.git" ]; then
-            echo "Checking package: $pkg"
-            cd "src/$pkg"
-            local_commit=$(git rev-parse HEAD)
-            cache_commit=$(git --git-dir="$CACHE_PATH/$pkg/.git" rev-parse HEAD)
-            if [ "$local_commit" == "$cache_commit" ]; then
-                echo "Commit match for $pkg. Syncing..."
-                rsync -a --delete "$CACHE_PATH/$pkg/" "src/$pkg/"
-            else
-                echo "Commit mismatch for $pkg. Skipping rsync."
-            fi
-            cd "$TRAINEE_WS"
+        echo "Checking package: $pkg"
+        cd "src/$pkg"
+        local_commit=$(git rev-parse HEAD)
+        cache_commit=$(git --git-dir="$CACHE_PATH/$pkg/.git" rev-parse HEAD)
+        if [ "$local_commit" == "$cache_commit" ]; then
+            echo "Commit match for $pkg. Syncing..."
+            rsync -a --delete "$CACHE_PATH/$pkg/" "src/$pkg/"
+        else
+            echo "Commit mismatch for $pkg. Skipping rsync."
         fi
+        cd "$TRAINEE_WS"
     done
 else
     echo "Cache mode not enabled or $CACHE_PATH does not exist."
