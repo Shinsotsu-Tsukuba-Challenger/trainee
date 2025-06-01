@@ -7,7 +7,9 @@ CACHE_PATH=$3
 sudo apt update -y
 sudo apt install -y python3-vcstool git rsync
 
-git clone git@github.com:Shinsotsu-Tsukuba-Challenger/trainee.git $HOME/trainee || true
+mkdir -p $HOME/trainee/
+git clone git@github.com:Shinsotsu-Tsukuba-Challenger/trainee.git /tmp/trainee
+rsync -av /tmp/trainee/ $HOME/trainee/
 
 grep -q "source \$HOME/trainee/install/setup.bash" $HOME/.bashrc || echo "source \$HOME/trainee/install/setup.bash" >> $HOME/.bashrc
 grep -q "export TRAINEE_WS=\$HOME/trainee" $HOME/.bashrc || echo "export TRAINEE_WS=\$HOME/trainee" >> $HOME/.bashrc
