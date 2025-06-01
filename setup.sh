@@ -42,7 +42,7 @@ if [ "$CACHE" == "true" ] && [ -d "$CACHE_PATH" ]; then
         cache_commit=$(git --git-dir="$CACHE_PATH/$pkg/.git" rev-parse HEAD)
         if [ "$local_commit" == "$cache_commit" ]; then
             echo "Commit match for $pkg. Syncing..."
-            rsync -a --delete "$CACHE_PATH/$pkg/" "src/$pkg/"
+            rsync -a --delete "$CACHE_PATH/$pkg/" "$TRAINEE_WS/src/$pkg/"
         else
             echo "Commit mismatch for $pkg. Skipping rsync."
         fi
