@@ -19,6 +19,9 @@ cd $TRAINEE_WS && mkdir -p src
 if [ "$TARGET" == "pc" ]; then
     echo "Setting up for PC"
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
+    curl -s https://koide3.github.io/ppa/setup_ppa.sh | sudo bash
+    sudo apt update
+    sudo apt install -y libiridescence-dev libboost-all-dev libglfw3-dev libmetis-dev libgtsam-points-dev
     sudo apt install -y ros-$ROS_DISTRO-gazebo-* ros-$ROS_DISTRO-glim-ros
 elif [ "$TARGET" == "raspi" ]; then
     echo "Setting up for Raspberry Pi"
@@ -26,6 +29,10 @@ elif [ "$TARGET" == "raspi" ]; then
 else
     echo "No or incorrect argument provided. Default setup will be used."
     vcs import src < repos/$ROS_DISTRO/trainee.repos --debug
+    curl -s https://koide3.github.io/ppa/setup_ppa.sh | sudo bash
+    sudo apt update
+    sudo apt install -y libiridescence-dev libboost-all-dev libglfw3-dev libmetis-dev libgtsam-points-dev
+    sudo apt install -y ros-$ROS_DISTRO-gazebo-* ros-$ROS_DISTRO-glim-ros
 fi
 
 rosdep update
@@ -52,7 +59,6 @@ else
     echo "Cache mode not enabled or $CACHE_PATH does not exist."
 fi
 
-# ビルド
 source /opt/ros/$ROS_DISTRO/setup.bash
 colcon build --symlink-install
 source $HOME/.bashrc
